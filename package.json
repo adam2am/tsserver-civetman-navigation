@@ -1,0 +1,22 @@
+{
+  "name": "tsserver-plugin-civet",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "typescript",
+    "tsserver",
+    "plugin",
+    "civet"
+  ],
+  "dependencies": {
+    "typescript": "^5.4.0"
+  },
+  "devDependencies": {
+    "@jridgewell/trace-mapping": "^0.3.25",
+    "tsup": "^8.0.0"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs --dts"
+  }
+}
