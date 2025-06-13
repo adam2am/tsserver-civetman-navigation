@@ -1,22 +1,46 @@
 {
   "name": "tsserver-civetman-navigation",
   "version": "1.0.0",
+  "description": "TypeScript language-service plugin that maps navigation info from generated .ts/.tsx files back to their original .civet sources and adds civet-aware module resolution.",
+  "author": "adam2am <adam2am@outlook.com>",
+  "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "keywords": [
     "typescript",
     "tsserver",
     "plugin",
-    "civet"
+    "civet",
+    "civetman",
+    "navigation"
   ],
-  "dependencies": {
-    "typescript": "^5.4.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adam2am/tsserver-civetman-navigation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adam2am/tsserver-civetman-navigation/issues"
+  },
+  "homepage": "https://github.com/adam2am/tsserver-civetman-navigation#readme",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "@jridgewell/trace-mapping": "^0.3.25",
+    "typescript": "^5.4.0",
     "tsup": "^8.0.0"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format cjs --dts"
+    "build": "tsup src/index.ts --format cjs --dts",
+    "prepublishOnly": "pnpm run build"
   }
 }
