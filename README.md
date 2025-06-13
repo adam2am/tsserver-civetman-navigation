@@ -21,7 +21,7 @@ You normally install the plugin **as a dev-dependency** of your project because 
 
 ## Usage
 
-Add the plugin to your `tsconfig.json`:
+1 - Add the plugin to your `tsconfig.json`:
 
 ```jsonc
 {
@@ -34,7 +34,9 @@ Add the plugin to your `tsconfig.json`:
 }
 ```
 
-Reload the TypeScript server (or restart your editor) and enjoy Civet-aware navigation and references directly inside your `.civet` files.
+2 - In VS Code press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> → **TypeScript: Select TypeScript Version** → **Use Workspace Version**. This ensures your editor uses the project's `typescript` dependency (which the plugin targets) instead of the built-in one.
+
+3 - Reload the TypeScript server (or simply restart your editor) and enjoy Civet-aware navigation and references directly towards your `.civet` files.
 
 ## How it works
 
